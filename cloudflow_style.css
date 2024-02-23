@@ -1,0 +1,1225 @@
+/* custom imported fonts */
+@font-face {
+      font-family: 'Futura';
+      src: url('../../Documents/Fonts/Futura/Futura\ Heavy\ font.ttf') format('truetype');
+}
+
+@font-face {
+      font-family: 'Gotham';
+      src: url('../../Documents/Fonts/Gotham-Font/Gotham-Font/GothamBook.ttf') format('truetype');
+}
+
+/* global */
+* {
+      font-family: Arial, Helvetica, sans-serif;
+}
+
+/* body */
+body {
+      background-image: linear-gradient(to top, transparent, rgba(56, 91, 232, 0.95)), url("https://wallpapercave.com/dwp1x/wp3082483.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100svh;
+      overflow-x: hidden;
+      background-size: 200%;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+      width: 7.5px;
+      background-color: #fefefe;
+      margin: 0;
+}
+
+::-webkit-scrollbar-thumb {
+      background-color: #3a95e2;
+}
+
+/* navbar */
+navbar {
+      position: fixed;
+      display: flex;
+      top: 0;
+      left: 0;
+      right: 0;
+      justify-content: right;
+      align-items: center;
+      z-index: 1;
+      background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+}
+
+navbar .language-btn {
+      font-size: 25px;
+      font-family: 'Gotham', sans-serif;
+      color: #eaeaea;
+      margin: 1em 2em;
+      border: none;
+      background-color: transparent;
+      padding: 10px;
+      cursor: pointer;
+      transition: all 300ms ease;
+      border-radius: 5px;
+}
+
+navbar .language-btn:hover, navbar .language-btn:focus {
+      border: none;
+      background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* main-body */
+main-body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+}
+
+/* language slide */
+.language-slide {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      background-color: #eaeaea;
+      z-index: 2;
+      display: flex;
+      justify-content: right;
+      transition: all 300ms ease;
+}
+
+.language-slide .options {
+      text-align: right;
+      margin: 0 5em;
+}
+
+.language-slide .options button {
+      padding: 15px;
+      color: #eaeaea;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-size: 25px;
+      border: none;
+      border-radius: 10px;
+      margin: 1em 0;
+      transition: all 300ms ease;
+      font-family: 'Gotham', sans-serif;
+      cursor: pointer;
+}
+
+.language-slide .options button:hover, .language-slide .options button:focus {
+      background-color: rgba(0, 0, 0, 0.3);
+}
+
+.language-slide .options h1 {
+      font-size: 50px;
+      font-family: 'Gotham', sans-serif;
+      margin: 0.75em 0;
+      text-decoration: underline solid;
+      text-underline-offset: 4px;
+}
+
+.language-slide .options a {
+      display: block;
+      font-size: 25px;
+      text-decoration: none;
+      color: #777;
+      transition: all 300ms ease;
+      margin: 0.5em 1em;
+}
+
+.language-slide .options a:hover, .language-slide .options a:focus {
+      color: #222;
+}
+
+
+/* first article */
+.article1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10em 0;
+      flex-direction: column;
+}
+
+/* first article image animation */
+@keyframes move-in {
+      
+      0% {
+            transform: translateY(25%);
+            opacity: 0;
+      }
+
+      100% {
+            transform: translateY(1em);
+            opacity: 1;
+      }
+
+}
+
+/* opacity animation */
+@keyframes fade-in {
+      
+      0% {
+            opacity: 0;
+      }
+
+      100% {
+            opacity: 1;
+      }
+
+}
+
+/* first article slogan */
+.article1 p {
+      font-size: 30px;
+      color: rgb(236, 236, 236);
+      margin: 0;
+      font-family: 'Gotham' sans-serif;
+      animation: fade-in 1.5s ease 1;
+}
+
+/* first article image */
+.article1 img {
+      width: 700px;
+      margin: 0;
+      transform: translateY(1em);
+      z-index: -1;
+      animation: move-in 0.75s ease 1;
+}
+
+
+/* second article */
+.article2 {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      padding: 5em 0;
+      background-color: rgb(255, 245, 241);
+}
+
+.article2 h1 {
+      font-family: 'Gotham', sans-serif;
+      font-size: 35px;
+      text-decoration: underline solid #a2a2a2;
+      text-underline-offset: 4px;
+      color: #444;
+}
+
+.article2 .card-title {
+      font-size: 20px;
+      margin: 0.25em 10px;
+}
+
+.article2 .card-button {
+      background-color: #4090ff;
+      border: none;
+      padding: 5px;
+      color: #fff;
+      font-size: 16px;
+      margin: 0.5em 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 300ms ease;
+}
+
+.article2 .card-button:hover, .article2 .card-button:focus {
+      background-color: #3070fd;
+}
+
+/* left side */
+.article2 .left-side .game-display {
+      display: flex;
+      flex-direction: row;
+      max-width: 340px;
+      overflow-x: scroll;
+}
+
+.article2 .left-side .game-display div {
+      width: 9em;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      margin: 1em;
+      background-color: #fff;
+}
+
+.article2 .left-side .game-display img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+}
+
+.article2 .left-side {
+      margin-right: 5em;
+      animation: fade-in 1s ease 1;
+}
+
+/* right side */
+.article2 .right-side .game-display {
+      display: flex;
+      flex-direction: row;
+      margin-top: 4em;
+      height: 8em;
+      background-color: #fff;
+      border-radius: 10px;
+}
+
+.article2 .right-side {
+      margin-left: 5em;
+      animation: fade-in 1s ease 1;
+}
+
+.article2 .right-side .game-display .arrangement {
+      width: 40em;
+      margin: 1em;
+}
+
+.article2 .right-side img {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+}
+
+.article2 .right-side .game-display .card-desc {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+}
+
+.article2 .right-side .game-display .card-desc p {
+      font-size: 14px;
+      color: #a2a2a2;
+}
+
+/* vertical */
+.article2 .vertical .game-display {
+      display: flex;
+      flex-direction: column;
+      max-width: 14em;
+      background-color: #fff;
+      border-radius: 10px;
+      margin: 2em 0;
+}
+
+.article2 .vertical img {
+      width: 14em;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+}
+
+.article2 .vertical {
+      display: none;
+      margin: 0 3em;
+}
+
+.article2 .vertical .game-display .card-description {
+      font-size: 14px;
+      margin: 1em;
+      color: #a2a2a2;
+}
+
+
+/* third article */
+.article3 {
+      padding: 5em 0;
+      background-color: rgb(255, 250, 250);
+      display: flex;
+      justify-content: center;
+}
+
+/* third article div */
+.article3 div {
+      width: 70%;
+}
+
+/* third article heading */
+.article3 h1 {
+      font-size: 4em;
+      font-family: 'Gotham', sans-serif;
+      margin: 0;
+}
+
+/* third article paragraph */
+.article3 p {
+      font-size: 1.5em;
+      color: #777;
+      margin: 1.5em 0;
+      line-height: 1.35em;
+}
+
+/* hr */
+.article3 hr {
+      margin: 5em 0;
+}
+
+/* third article futura span */
+.article3 f-span {
+      font-family: 'Futura', sans-serif;
+}
+
+/* third article buttons */
+.article3 button {
+      margin: 1em 0;
+      font-size: 1.5em;
+      color: snow;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+}
+
+.article3 #first-btn {
+      background-color: dodgerblue;
+      transition: all 300ms ease;
+}
+
+.article3 #first-btn:hover {
+      background-color: rgb(21, 125, 230);
+}
+
+.article3 #second-btn {
+      background-color: hotpink;
+      transition: all 300ms ease;
+}
+
+.article3 #second-btn:hover {
+      background-color: rgb(222, 88, 155);
+}
+
+.article3 #third-btn {
+      background-color: lightcoral;
+      transition: all 300ms ease;
+}
+
+.article3 #third-btn:hover {
+      background-color: rgb(210, 112, 112);
+}
+
+/* third article gradients */
+.article3 gradient1 {
+      background: linear-gradient(to right, cornflowerblue, lightblue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: none;
+}
+
+.article3 gradient2 {
+      background: linear-gradient(to right, fuchsia, hotpink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: none;
+}
+
+.article3 gradient3 {
+      background: linear-gradient(to right, tomato, coral);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: none;
+}
+
+/* blur boxes */
+.article3 .blur-box {
+      display: flex;
+      flex-direction: column;
+      filter: blur(4px);
+      transition: all 300ms ease;
+}
+
+
+/* fourth article */
+.article4 {
+      background-color: rgb(253, 245, 230);
+      display: flex;
+      justify-content: center;
+      padding: 5em 0;
+}
+
+/* fourth article div */
+.article4 div {
+      width: 70%;
+}
+
+/* fourth article headings */
+.article4 h1 {
+      font-size: 4em;
+      font-family: 'Gotham', sans-serif;
+      margin: 0;
+}
+
+/* fourth article paragraph */
+.article4 p {
+      font-size: 1.5em;
+      color: #777;
+      margin: 1.5em 0;
+      line-height: 1.35em;
+}
+
+/* fourth article button wrapper */
+.article4 .button-wrapper {
+      display: flex;
+      padding: 0.5em 0;
+      justify-content: left;
+}
+
+/* fourth article button */
+.article4 .discord-button {
+      background-color: transparent;
+      border: 2px solid #5865f2;
+      color: #5865f2;
+      padding: 5px 15px;
+      border-radius: 5px;
+      font-size: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+.article4 .discord-button:hover, .article4 .discord-button:focus {
+      background-color: #5865f2;
+      color: #f4f4f4;
+      border: 2px solid #5865f2;
+}
+
+
+/* footer */
+.article5 {
+      padding: 5em 0;
+      background-color: rgb(20, 20, 20);
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+}
+
+/* footer's h2 */
+.article5 h1 {
+      font-size: 30px;
+      color: #efefef;
+      font-family: 'Gotham', sans-serif;
+}
+
+/* footer's p */
+.article5 .initial {
+      color: #bfbfbf;
+      margin: 0.5em 0;
+      font-size: 20px;
+}
+
+/* footer's hyperlink */
+.article5 .initial a {
+      color: #bfbfbf;
+      text-decoration: none;
+      transition: all 300ms ease;
+}
+
+.article5 .initial a:hover {
+      color: #eaeaea;
+}
+
+/* footer's links */
+.article5 .social-bar {
+margin-top: 2em;
+word-spacing: 2em;
+font-size: 20px;
+}
+
+/* youtube */
+.youtube {
+      color: #eaeaea;
+      transition: all 300ms ease;
+}
+
+.youtube:hover {
+      color: #f00;
+}
+
+/* discord */
+.discord {
+      color: #eaeaea;
+      transition: all 300ms ease;
+}
+
+.discord:hover {
+      color: #5865f2;
+}
+
+/* twiiter */
+.twitter {
+      color: #eaeaea;
+      transition: all 300ms ease;
+}
+
+.twitter:hover {
+      color: rgb(29, 161, 242);
+}
+
+/* group */
+.c-group {
+      color: #eaeaea;
+      transition: all 300ms ease;
+}
+
+.c-group:hover {
+      color: #3D52D5;
+}
+
+/* whatsapp */
+.whatsapp {
+      color: #eaeaea;
+      transition: all 300ms ease;
+}
+
+.whatsapp:hover {
+      color: #5FFC7B;
+}
+
+
+/* website media queries */
+
+/* 4k resolution (2.5k px in width) */
+@media screen and (width <= 2560px) {
+
+      /* body */
+      body {
+            background-size: 100%;
+      }
+
+      /* navbar */
+      navbar .language-btn {
+            font-size: 30px;
+      }
+
+      /* language slide */
+      .language-slide .options h1 {
+            font-size: 75px;
+      }
+
+      .language-slide .options a {
+            font-size: 35px;
+      }
+
+      .language-slide .options button {
+            font-size: 40px;
+      }
+
+      /* first article */
+      .article1 img {
+            width: 1100px;
+      }
+
+      .article1 p {
+            font-size: 40px;
+            transform: translateY(-0.5em);
+      }
+
+      /* second article */
+      .article2 h1 {
+            font-size: 45px;
+      }
+
+      .article2 .card-title {
+            font-size: 30px;
+      }
+
+      .article2 button {
+            font-size: 26px;
+      }
+
+      .article2 .card-desc {
+            font-size: 22px;
+      }
+
+      .article2 .left-side .game-display div {
+            width: 12em;
+      }
+
+      .article2 .left-side .game-display {
+            max-width: 460px;
+      }
+
+      .article2 .right-side .game-display {
+            height: 11em;
+      }
+
+      .article2 .right-side .game-display .arrangement {
+            width: 50em;
+      }
+
+      /* third article */
+      .article3 h1, .article4 h1 {
+            font-size: 90px;
+      }
+
+      .article3 button[type="button"] {
+            font-size: 30px;
+      }
+
+      .article3 p, .article4 p {
+            font-size: 2em;
+      }
+
+      /* fourth article */
+      .article4 .discord-button {
+            font-size: 30px;
+      }
+
+      /* footer */
+      .article5 h1 {
+            font-size: 40px;
+      }
+
+      .article5 .initial {
+            font-size: 28px;
+      }
+
+      .article5 .social-bar {
+            font-size: 24px;
+      }
+
+}
+
+
+/* (1980px in width) */
+@media screen and (width <= 1980px) {
+
+      /* body */
+      body {
+            background-size: 100%;
+      }
+
+      /* navbar */
+      navbar .language-btn {
+            font-size: 25px;
+      }
+
+      /* language slide */
+      .language-slide .options h1 {
+            font-size: 45px;
+      }
+
+      .language-slide .options a {
+            font-size: 20px;
+      }
+
+      .language-slide .options button {
+            font-size: 25px;
+      }
+
+      /* first article */
+      .article1 img {
+            width: 700px;
+      }
+
+      .article1 p {
+            font-size: 30px;
+      }
+
+      /* second article */
+      .article2 {
+            display: flex;
+            flex-direction: column-reverse;
+      }
+
+      .article2 .left-side, .article2 .right-side {
+            display: block;
+            margin: 1em 5em;
+      }
+
+      .article2 h1 {
+            font-size: 32px;
+      }
+
+      .article2 .card-title {
+            font-size: 24px;
+      }
+
+      .article2 button {
+            font-size: 20px;
+      }
+
+      .article2 .card-desc {
+            font-size: 20px;
+      }
+
+      .article2 .left-side .game-display div {
+            width: 10em;
+      }
+
+      .article2 .left-side .game-display {
+            max-width: 380px;
+      }
+
+      .article2 .right-side .game-display {
+            margin: 1em 0;
+            height: 9em;
+            display: inline-flex;
+      }
+
+      .article2 .right-side .game-display .arrangement {
+            width: 45em;
+      }
+
+      /* third article */
+      .article3 h1, .article4 h1 {
+            font-size: 70px;
+      }
+
+      .article3 button[type="button"] {
+            font-size: 25px;
+      }
+
+      .article3 p, .article4 p {
+            font-size: 1.5em;
+      }
+
+      /* fourth article */
+      .article4 .discord-button {
+            font-size: 20px;
+      }
+
+      /* footer */
+      .article5 h1 {
+            font-size: 30px;
+      }
+
+      .article5 .initial {
+            font-size: 20px;
+      }
+
+      .article5 .social-bar {
+            font-size: 20px;
+      }
+
+}
+
+
+/* latpop-l (1440px in width ) */
+@media screen and (width <= 1440px) {
+
+      /* body */
+      body {
+            background-size: 100%;
+      }
+
+      /* navbar */
+      navbar .language-btn {
+            font-size: 20px;
+      }
+
+      /* language slide */
+      .language-slide .options h1 {
+            font-size: 40px;
+      }
+
+      .language-slide .options a {
+            font-size: 18px;
+      }
+
+      .language-slide .options button {
+            font-size: 22px;
+      }
+
+      /* first article */
+      .article1 img {
+            width: 600px;
+      }
+
+      .article1 p {
+            font-size: 28px;
+      }
+
+      /* second article */
+      .article2 {
+            display: flex;
+            flex-direction: column-reverse;
+      }
+
+      .article2 .left-side, .article2 .right-side {
+            display: block;
+            margin: 1em 5em;
+      }
+
+      .article2 h1 {
+            font-size: 30px;
+      }
+
+      .article2 .card-title {
+            font-size: 24px;
+      }
+
+      .article2 button {
+            font-size: 20px;
+      }
+
+      .article2 .card-desc {
+            font-size: 20px;
+      }
+
+      .article2 .left-side .game-display {
+            max-width: 380px;
+      }
+
+      .article2 .right-side .game-display {
+            margin: 1em 0;
+            height: 9em;
+            display: inline-flex;
+      }
+
+      /* third article */
+      .article3 h1, .article4 h1 {
+            font-size: 60px;
+      }
+
+      .article3 button[type="button"] {
+            font-size: 20px;
+      }
+
+      .article3 p, .article4 p {
+            font-size: 1.25em;
+      }
+
+      /* fourth article */
+      .article4 .discord-button {
+            font-size: 18px;
+      }
+
+      /* footer */
+      .article5 h1 {
+            font-size: 26px;
+      }
+
+      .article5 .initial {
+            font-size: 18px;
+      }
+
+      .article5 .social-bar {
+            font-size: 18px;
+      }
+
+}
+
+
+/* laptop (1024px in width) */
+@media screen and (width <= 1024px) {
+
+      /* body */
+      body {
+            background-size: 100%;
+      }
+
+      /* navbar */
+      navbar .language-btn {
+            font-size: 18px;
+      }
+
+      /* language slide */
+      .language-slide .options h1 {
+            font-size: 36px;
+      }
+
+      .language-slide .options a {
+            font-size: 18px;
+      }
+
+      .language-slide .options button {
+            font-size: 16px;
+      }
+
+      /* first article */
+      .article1 img {
+            width: 500px;
+      }
+
+      .article1 p {
+            font-size: 24px;
+      }
+
+      /* second article */
+      .article2 {
+            display: flex;
+            flex-direction: column-reverse;
+      }
+
+      .article2 .left-side, .article2 .right-side {
+            display: block;
+            margin: 1em 2.5em;
+      }
+
+      .article2 .left-side .game-display div {
+            width: 8em;
+      }
+
+      .article2 h1 {
+            font-size: 24px;
+      }
+
+      .article2 .card-title {
+            font-size: 18px;
+      }
+
+      .article2 button {
+            font-size: 16px;
+      }
+
+      .article2 .card-desc {
+            font-size: 14px;
+      }
+
+      .article2 .left-side .game-display {
+            max-width: 320px;
+      }
+
+      .article2 .right-side .game-display {
+            margin: 1em 0;
+            height: 9em;
+            display: inline-flex;
+            max-width: 50em;
+      }
+
+      /* third article */
+      .article3 h1, .article4 h1 {
+            font-size: 50px;
+      }
+
+      .article3 button[type="button"] {
+            font-size: 16px;
+      }
+
+      .article3 p, .article4 p {
+            font-size: 1.1em;
+      }
+
+      /* fourth article */
+      .article4 .discord-button {
+            font-size: 16px;
+      }
+
+      /* footer */
+      .article5 h1 {
+            font-size: 24px;
+      }
+
+      .article5 .initial {
+            font-size: 16px;
+      }
+
+      .article5 .social-bar {
+            font-size: 16px;
+      }
+
+}
+
+
+/* tablet (768px in width) */
+@media screen and (width <= 768px) {
+
+      /* body */
+      body {
+            background-size: 100%;
+      }
+
+      /* navbar */
+      navbar .language-btn {
+            font-size: 14px;
+      }
+
+      /* language slide */
+      .language-slide .options {
+            margin: 0 2em;
+      }
+
+      .language-slide .options h1 {
+            font-size: 30px;
+      }
+
+      .language-slide .options a {
+            font-size: 16px;
+      }
+
+      .language-slide .options button {
+            font-size: 14px;
+      }
+
+      /* first article */
+      .article1 img {
+            width: 500px;
+      }
+
+      .article1 p {
+            font-size: 24px;
+            transform: translateY(-0.5em);
+      }
+
+      /* second article */
+      .article2 {
+            display: flex;
+            flex-direction: column-reverse;
+      }
+
+      .article2 .left-side, .article2 .right-side {
+            display: block;
+            margin: 1em 2.5em;
+      }
+
+      .article2 .left-side .game-display div {
+            width: 9em;
+      }
+
+      .article2 h1 {
+            font-size: 24px;
+      }
+
+      .article2 .card-title {
+            font-size: 16px;
+      }
+
+      .article2 button {
+            font-size: 14px;
+      }
+
+      .article2 .card-desc {
+            font-size: 10px;
+      }
+
+      .article2 .left-side .game-display {
+            max-width: 350px;
+      }
+
+      .article2 .right-side .game-display {
+            margin: 1em 0;
+            height: 10em;
+            display: inline-flex;
+            max-width: 43em;
+      }
+
+      /* third article */
+      .article3 {
+            padding: 5em 0;
+      }
+
+      .article3 h1, .article4 h1 {
+            font-size: 35px;
+      }
+
+      .article3 p, .article4 p {
+            font-size: 0.8em;
+      }
+
+      .article3 button[type="button"] {
+            font-size: 10px;
+      }
+
+      /* fourth article */
+      .article4 .discord-button {
+            font-size: 10px;
+      }
+
+      /* footer */
+      .article5 h1 {
+            font-size: 18px;
+      }
+
+      .article5 .initial {
+            font-size: 12px;
+      }
+
+      .article5 .social-bar {
+            font-size: 12px;
+      }
+
+}
+
+
+/* mobile-l (425px in width) */
+@media screen and (width <= 425px) {
+
+      /* body */
+      body {
+            background-size: 100%;
+      }
+
+      /* navbar */
+      navbar .language-btn {
+            font-size: 12px;
+      }
+
+      /* language slide */
+      .language-slide .options {
+            margin: 0 2em;
+      }
+
+      .language-slide .options h1 {
+            font-size: 26px;
+      }
+
+      .language-slide .options a {
+            font-size: 14px;
+      }
+
+      .language-slide .options button {
+            font-size: 10px;
+      }
+
+      /* first article */
+      .article1 img {
+            width: 300px;
+      }
+
+      .article1 p {
+            font-size: 16px;
+            transform: translateY(0.5em);
+      }
+
+      /* second article */
+      .article2 .right-side {
+            display: none;
+      }
+
+      .article2 .vertical {
+            display: block;
+      }
+
+      .article2 h1 {
+            font-size: 22px;
+      }
+
+      .article2 button {
+            font-size: 16px;
+      }
+
+      .article2 .card-title {
+            font: 16px;
+      }
+
+      /* third article */
+      .article3 {
+            padding: 5em 0;
+      }
+
+      .article3 h1, .article4 h1 {
+            font-size: 28px;
+      }
+
+      .article3 p, .article4 p {
+            font-size: 0.9em;
+      }
+
+      .article3 button[type="button"] {
+            font-size: 14px;
+      }
+
+      /* fourth article */
+      .article4 .discord-button {
+            font-size: 8px;
+      }
+
+      /* footer */
+      .article5 h1 {
+            font-size: 14px;
+      }
+
+      .article5 .initial {
+            font-size: 10px;
+      }
+
+      .article5 .social-bar {
+            font-size: 10px;
+      }
+
+}
